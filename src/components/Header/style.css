@@ -1,0 +1,8 @@
+.spacerLeft{
+  margin-left:'20%';
+  display: flex;
+}
+.spacerRight{
+  margin-right:'20%';
+  display: flex;
+}
