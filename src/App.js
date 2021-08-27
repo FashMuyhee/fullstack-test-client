@@ -10,8 +10,7 @@ function App() {
   const [data, setData] = useState({ })
 
   const handleDownload = async () => {
-    const res = await downloadCv()
-    console.log(res)
+    await downloadCv()
   }
 
   const loadInfo = async () => {
@@ -30,12 +29,12 @@ function App() {
           <Col xs={12} md={6} className="left">
             <div className="wrapper">
               <div className="greeting">
-                <p className="hi">{data?.greeting} I'm</p>
+                <p className="hi">{data?.greeting??'Yo!'} I'm</p>
                 <h1 className="name">
-                  {data?.name}
+                  {data?.name??"Jane Doe..."}
                 </h1>
-                <h5>i'm a {data?.title}</h5>
-                <p className="desc">Database done. Server done. Now it's time for the Server API endpoint. Let's start by creating a routes folder and adding record.js in it </p>
+                <h5>i'm a {data?.title?? "Placeholder"}</h5>
+                <p className="desc">Maboriosam nesciung eget magna dapibus distinctio per odiy, lorem abdul into the find to make it alazing</p>
               </div>
               <Button onClick={handleDownload}>Download CV</Button>
             </div>
